@@ -76,6 +76,15 @@ public abstract class Person {
 
     public abstract void die();
 
+    public void infoAboutChildren() {
+        int counter = 0;
+        System.out.println("У меня " + children.size() + " детей");
+        for (Person child : children) {
+            counter++;
+            System.out.println(counter + ") " + child.name);
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
